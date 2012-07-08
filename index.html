@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ClanWatch</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	
+	<link rel="stylesheet" href="css/style.css" media="screen">
+	
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/underscore.js" ></script>
+	<script src="js/backbone.js" ></script>
+	<script src="js/friends.js" ></script>
+	
+	<script type="text/template" id="friends-list-template">
+		<ul class="friends">
+		</ul>
+	</script>
+	
+	<script type="text/template" id="friend-template">
+		<img src="<%= gamerpic %>" class='presence'></span>
+		<div class="gamertag"><%= gamertag %></div>
+		<div class="g"></div>
+		<div class="gamerscore"><%= gamerscore %></div>
+		<div class="status"><%= status %></div>
+	</script>
+	
+	
+	<script type="application/javascript">
+		jQuery(function() {
+			window.friends.fetch();
+		});
+	</script>
+</head>
+	<body>
+		<div id="container"></container>	
+	</body>
+</html>
